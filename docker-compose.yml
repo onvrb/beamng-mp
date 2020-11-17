@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  beamng-mp:
+    image: onvrb/beamng-mp
+    container_name: beamng-mp
+    restart: unless-stopped
+    ports:
+     - 30814:30814/tcp
+     - 30814:30814/udp
+    volumes:
+      - /path/to/server-files:/config # change it to where BeamMP-Server.exe is located
